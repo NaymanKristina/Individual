@@ -1,0 +1,35 @@
+function solve()
+{
+var p=parseInt(document.getElementById("p").value);
+var a = [];
+var count=0;
+var n=0;
+var left=0;
+var right=1.5;
+var result=p+"=";
+for(count=1;!(p>left&&p<right);count++)
+{
+left=right;
+right=Math.pow(3,count+1)/2;
+}
+a[count]=1;
+p-=Math.pow(3,count-1);
+for(n=count-1;n>0;n--)
+{
+left=Math.pow(3,n-1)/2;
+right=Math.pow(3,n)/2;
+if(Math.abs(p)>left&&Math.abs(p)<right)
+	a[n]=(p>0)?1:-1;
+else a[n]=0;
+p-=a[n]*Math.pow(3,n-1);
+}
+for(n=count;n>0;n--)
+{
+var znak=(a[n]>=0)?"+":"";
+if(n==count)
+result+=String(a[n])+"*3^"+String(n-1);
+else
+result+=znak+String(a[n])+"*3^"+String(n-1);
+}
+alert(result);
+}
