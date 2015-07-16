@@ -1,0 +1,14 @@
+# Individual
+<html>
+<head> <script src="lp_Nayman.js"></script> </head>
+<body>
+<h1>Индивидуальное задание</h1>
+<div>
+<b>588.</b> Дано натуральное число p. Получить последовательность a<sub>0</sub>, ..., a<sub>n</sub>, каждый член которой равен -1, 0 или 1, такую, что p = a<sub>n</sub>*3<sup>n</sup> +...+ a<sub>1</sub>*3 + a<sub>0</sub> (a<sub>n</sub>!=0).
+</div>
+Введите p:
+<input type="text" name="p" id="p">
+<button onclick="solve()">Решить</button>
+
+</body>
+</html>
